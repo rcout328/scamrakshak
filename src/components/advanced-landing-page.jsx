@@ -57,8 +57,7 @@ export default function AdvancedLandingPage() {
       <main className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-20 mt-20">
         <h2 className="text-[#ddff00] text-xl mb-2 animate-fade-in-up">ScamRakshak</h2>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl leading-tight animate-fade-in-up animation-delay-300">
-       <span className="md:hidden"> Your Security at Your Fingertips</span>
-          <span className="hidden md:inline">
+          <span className="md:inline">
             Your Security at Your Fingertips
             <br />
             Fast and Safe Access Every Time!
