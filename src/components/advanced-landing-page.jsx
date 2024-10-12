@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Shield, ChevronDown, Menu as MenuIcon, MousePointer2 } from "lucide-react"
+import { Shield, ChevronDown, Menu as MenuIcon } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,39 +13,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { IntegrationDashboard } from "./integration-dashboard"
 import { AdvancedSecurityDashboard } from "./advanced-security-dashboard"
 import { AdvancedFooter } from "./advanced-footer"
-import {  Header } from "./header"
+import { Header } from "./header"
 import Link from 'next/link'
 
 export default function AdvancedLandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
-  const [isHovering, setIsHovering] = useState(false)
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY })
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    };
-  }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#083239] to-[#051e22] text-white relative overflow-hidden cursor-none">
-      {/* Custom Cursor */}
-      <div
-        className="fixed z-50 pointer-events-none transition-all duration-100 ease-out"
-        style={{ 
-          left: `${cursorPosition.x}px`, 
-          top: `${cursorPosition.y}px`,
-          transform: `translate(-50%, -50%) scale(${isHovering ? 1.5 : 1})`,
-        }}>
-        <MousePointer2 className="w-6 h-6 text-green-300" />
-      </div>
-      
+    <div className="min-h-screen bg-gradient-to-b from-[#083239] to-[#051e22] text-white relative overflow-hidden">
       {/* Background with green circles */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-500/10 rounded-full filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-300/10 rounded-full filter blur-3xl animate-pulse animation-delay-1000"></div>
@@ -68,7 +43,6 @@ export default function AdvancedLandingPage() {
           information with ease and confidence.
         </p>
        
-        
         {/* Integration Dashboard */}
         <section className="w-full mt-20">
           <h2 className="text-2xl font-bold mb-8 text-[#ddff00]">Integration Dashboard</h2>
@@ -127,6 +101,6 @@ const styles = `
 
 /* Hide default cursor */
 body {
-  cursor: none;
+  cursor: auto;
 }
 `
