@@ -43,10 +43,10 @@ export function ContactPageComponent() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12">
           <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
-            Let's <span className="text-[#ddff00]">Connect</span>
+            Let&apos;s <span className="text-[#ddff00]">Connect</span>
           </h1>
           <p className="mt-4 text-xl text-gray-300">
-            Have a question or want to collaborate? We're all ears!
+            Have a question or want to collaborate? We&apos;re all ears!
           </p>
         </motion.div>
 
